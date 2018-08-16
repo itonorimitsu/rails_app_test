@@ -1,0 +1,883 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:00:40.664819"], ["updated_at", "2018-08-16 07:00:40.664819"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:05:20.277853"], ["updated_at", "2018-08-16 07:05:20.277853"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:07:26.731725"], ["updated_at", "2018-08-16 07:07:26.731725"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:12:11.385393"], ["updated_at", "2018-08-16 07:12:11.385393"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:18:40.246034"], ["updated_at", "2018-08-16 07:18:40.246034"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816054604)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 07:28:31.421915"], ["updated_at", "2018-08-16 07:28:31.421915"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180816061507)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 08:50:52.472441"], ["updated_at", "2018-08-16 08:50:52.472441"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:50:52.631566', '2018-08-16 08:50:52.631566', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:50:52.631566', '2018-08-16 08:50:52.631566', 298486374)[0m
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 17:50:53 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (7388.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 7455ms (Views: 7437.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2018-08-16 17:51:01 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_shuold_not_be_too_long
+------------------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:54:06.505695', '2018-08-16 08:54:06.505695', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:54:06.505695', '2018-08-16 08:54:06.505695', 298486374)[0m
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 17:54:07 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (478.9ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 540ms (Views: 522.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_shuold_be_present
+--------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:54:56.393670', '2018-08-16 08:54:56.393670', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 08:54:56.393670', '2018-08-16 08:54:56.393670', 298486374)[0m
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 17:54:57 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (578.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 641ms (Views: 621.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2018-08-16 17:54:57 +0900
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Started GET "/help" for 127.0.0.1 at 2018-08-16 17:54:57 +0900
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Started GET "/about" for 127.0.0.1 at 2018-08-16 17:54:57 +0900
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 17:54:57 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2018-08-16 17:54:58 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_shuold_be_present
+--------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_shuold_not_be_too_long
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (3.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 11:33:31.093366', '2018-08-16 11:33:31.093366', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2018-08-16 11:33:31.093366', '2018-08-16 11:33:31.093366', 298486374)[0m
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_shuold_be_present
+--------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "   "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@examole.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_shuold_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Example User"], ["email", "user@example.com"], ["created_at", "2018-08-16 11:33:31.149386"], ["updated_at", "2018-08-16 11:33:31.149386"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "USER@EXAMPLE.COM"], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "User@foo.COM"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "A_US-ER@foo.bar.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "first.last@foo.jp"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice+bob@baz.cn"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_shuold_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 20:33:31 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (630.0ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 712ms (Views: 683.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 20:33:32 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2018-08-16 20:33:32 +0900
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (2.3ms)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Started GET "/about" for 127.0.0.1 at 2018-08-16 20:33:32 +0900
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Started GET "/help" for 127.0.0.1 at 2018-08-16 20:33:32 +0900
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2018-08-16 20:33:32 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 11:59:49.396519"], ["updated_at", "2018-08-16 11:59:49.396519"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:02:01.331279"], ["updated_at", "2018-08-16 12:02:01.331279"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:03:23.350604"], ["updated_at", "2018-08-16 12:03:23.350604"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndexToUsersEmail (20180816113459)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:04:06.887772"], ["updated_at", "2018-08-16 12:04:06.887772"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:06:14.314428"], ["updated_at", "2018-08-16 12:06:14.314428"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:08:43.905502"], ["updated_at", "2018-08-16 12:08:43.905502"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816061507)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:11:54.108750"], ["updated_at", "2018-08-16 12:11:54.108750"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180816115410)[0m
+  [1m[35m (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180816061507),
+(20180816113459);
+
+[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-08-16 12:33:31.152862"], ["updated_at", "2018-08-16 12:33:31.152862"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_shuold_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_shuold_be_present
+--------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "   "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_shuold_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example User"], ["email", "user@example.com"], ["created_at", "2018-08-16 12:33:31.339890"], ["updated_at", "2018-08-16 12:33:31.339890"], ["password_digest", "$2a$04$KyC8iB6bjljn/B4H3Fcu5uqTYYYJj2kRTthHRQxb.N24YxqCBy7Ta"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "USER@EXAMPLE.COM"], ["LIMIT", 1]]
+  [1m[35m (3.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@examole.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "User@foo.COM"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "A_US-ER@foo.bar.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "first.last@foo.jp"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice+bob@baz.cn"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (6.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2018-08-16 21:47:18 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 651ms (Views: 634.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2018-08-16 21:47:19 +0900
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 21:47:19 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Started GET "/about" for 127.0.0.1 at 2018-08-16 21:47:19 +0900
+Processing by StaticPagesController#about as HTML
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Started GET "/help" for 127.0.0.1 at 2018-08-16 21:47:19 +0900
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+UserTest: test_email_validation_shuold_accept_valid_adresses
+------------------------------------------------------------
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "User@foo.COM"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "A_US-ER@foo.bar.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "first.last@foo.jp"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "alice+bob@baz.cn"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_shuold_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_shuold_not_be_too_long
+-------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@examole.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_shuold_be_unique
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Example User"], ["email", "user@example.com"], ["created_at", "2018-08-16 12:47:19.709221"], ["updated_at", "2018-08-16 12:47:19.709221"], ["password_digest", "$2a$04$ViQKTiup4/R26K7Ag55jWOvgnZn1ne2Lv3uOmxuOsSz.MyShc4sZW"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "USER@EXAMPLE.COM"], ["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_shuold_be_present
+--------------------------------------
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "   "], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2018-08-16 21:47:19 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
