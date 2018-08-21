@@ -5,11 +5,12 @@ class UsersController < ApplicationController
   # GET /users/:id
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.where(activated: FILL_IN).paginate(page: params[:page])
   end
 
   def show
     @user = User.find(params[:id])
+    redirect_to root_url and return unless FILL_IN
     # => app/views/users/show.html.erb
     # debugger
   end
@@ -21,12 +22,10 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-    if @user.save # => Validation
-      # Sucess
-      log_in @user
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
-      # GET "/users/#{@user.id}" => show
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       # Failure
       render 'new'     
